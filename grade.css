@@ -1,0 +1,42 @@
+body{
+    background: #999;
+    font-family: arial;
+}
+
+h2{
+    color:#000;
+}
+
+h1{
+    text-align:center;
+}
+
+h4{
+    background: #000;
+    color: #fff;
+    padding: 20px
+}
+
+.content {    
+    padding: 0 20px;
+    max-height: 0;
+    width: 50%;
+    position: center;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.collapsible {
+    background-color: #777;
+    left: 25%;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
