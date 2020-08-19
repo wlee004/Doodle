@@ -50,8 +50,8 @@ header {
 .icons {
     font-family: 'Amatic SC', cursive;
     display: flex;
-    justify-content: flex-end;
-    width: 23%; 
+    padding-left: 700px;
+
 }
 
 .icons a {
@@ -157,3 +157,5 @@ header {
     color: white;
   }
   /* -------BUTTON-END------- */
+
+
