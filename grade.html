@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Grades</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/9c3fd62c76.js" crossorigin="anonymous"></script>
+        <title></title>
+        <link rel = "icon" href = "https://image.flaticon.com/icons/png/512/1985/1985640.png" type = "image/x-icon"> 
+        <body class = "container"> 
+        <link rel="stylesheet" href="Base.css">
         <link href = "grade.css" rel = "stylesheet" type ="text/css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
+    <header>
+        <div class="navigation">
+            <div class="logo">
+                <a href="/">
+                    <!--<i class="fas fa-university"></i>-->
+                    Doodle
+                </a>
+            </div>
+            <div class= "sub_title">
+                <a>
+                    Grade
+                </a>
+            </div>
+           <div class="icons">
+                <a href="/" class="home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="/" class="explore">
+                    <i class="far fa-compass"></i>
+                </a>
+                <a href="/" class="activity">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a class="profile" href="/accounts/logout">
+                    <i class="fas fa-user "></i>
+                </a>
+            </div> 
+        </div>
+    </header>
+
     <body>
         <div>
             <h1> Grade </h1>
         </div>
 
-        <div id="class_grade"></div>
+        <div id="space"></div>
 
     <!-- TEMPORARY STUDENT CLASS -->
         <script>
@@ -33,30 +74,49 @@
             }
             // TEMP STUDENT FOR TESTING PURPOSES 
             // LATER ADD DATA FROM QUERY 
-            s1 = new Student("Bob", ["CSC101", "CSC201"]);
+            s1 = new Student("Bob", ["CSC101", "CSC201", "CSC301", "CSC401", "CSC501", "CSC601", "CSC701"]);
         </script>
 
     <!-- DISPLAY ALL CLASSES FOR THE STUDENT -->
-    
-    <!-- 
         <script>
-            var fragment = new DocumentFragment();
             var sections = ["Exams", "Quizzes", "Projects", "Homework"];
             for(var i = 0; i < s1.course_list.length; i++){
-                
-                node = document.createElement("h2");
+                var node = document.createElement("h2");
                 node.innerHTML = s1.course_list[i];
-                fragment.appendChild(node);
+                document.getElementById("space").appendChild(node);
 
                 for(var j = 0; j < 4; j++){
-                    node = document.createElement("h4");
-                    node.innerHTML = sections[j];
-                    fragment.appendChild(node);
+                    var button = document.createElement("button");
+                    button.innerHTML = sections[j];
+                    button.setAttribute("class", "collapsible");
+                    document.getElementById("space").appendChild(button);
+
+                    var div = document.createElement("div");
+                    div.setAttribute("class","content");
+                    var p = document.createElement("p");
+                    p.innerHTML = "Grade: 90%";
+                    div.appendChild(p);
+                    document.getElementById("space").appendChild(div);
                 }
             }
-            document.getElementById("class_grade").appendChild(fragment);
         </script>
-    -->
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+        
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+            }
+        </script>
         
     </body>
 </html>
