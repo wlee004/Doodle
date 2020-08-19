@@ -17,10 +17,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <Ul>
+    <header name="top">
         <div class="navigation">
             <div class="logo">
-                <a href="/">
+                <a>
                     <!--<i class="fas fa-university"></i>-->
                     Doodle
                 </a>
@@ -44,8 +44,11 @@
             
         </div>
     
-    </UL>
+    </header class="topHeader">
     <body>
+
+        <a onclick="topFunction()" id="upBtn" title="Go to top"><i class="fas fa-chevron-circle-up" ></i> </a>
+
     <div class="space"></div>
     
     <button class="collapsible">Homework #1</button>
@@ -90,8 +93,7 @@
     <button class="button button1">Upload</button>
     <button class="button button2">Submit</button>
 </div>
-
-
+<!--SCRIPT FOR COLLASPIBLE-START-->
     <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -109,6 +111,55 @@
     }
     </script>
     </body>
+<!--SCRIPT FOR COLLASPIBLE-END-->
 
-
+<!--SCRIPT FOR SCROLLING-START-->
+<script>
+    //Get the button
+    var mybutton = document.getElementById("upBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+<!--SCRIPT FOR SCROLLING-END-->
+<body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <!-- all other page content -->
+      </div>
+      <footer id="footer">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div></footer>
+    </div>
+   </body>
+<!--<footer>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p></p>
+      </footer  id="footer"> -->
 </html>
