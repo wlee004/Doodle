@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/9c3fd62c76.js" crossorigin="anonymous"></script>
@@ -44,55 +46,124 @@
             
         </div>
     
-    </header class="topHeader">
+    </header>
+
+
     <body>
 
         <a onclick="topFunction()" id="upBtn" title="Go to top"><i class="fas fa-chevron-circle-up" ></i> </a>
 
     <div class="space"></div>
-    
+    <div class= "sub_title">
+        <a style="padding-left: 46.6%;">
+            CSCI 34000
+        </a>
+    </div>
     <button class="collapsible">Homework #1</button>
     <div class="content" >
-        <button class="button button1">Upload</button>
-        <button class="button button2">Submit</button>
-        <p>Uploaded: Mood.jpeg</p>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick="submitFunction()" value="Submit">
+        </form>
     </div>
+
     <button class="collapsible">Homework #2</button>
     <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="button button1">Upload</button>
-        <button class="button button2">Submit</button>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick=" submitFunction()" value="Submit">
+        </form>
     </div>
+
     <button class="collapsible">Homework #3</button>
     <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="button button1">Upload</button>
-        <button class="button button2">Submit</button>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick=" submitFunction()" value="Submit">
+        </form>
     </div>
+
     <button class="collapsible">Exam #1</button>
     <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="button button1">Upload</button>
-        <button class="button button2">Submit</button>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick=" submitFunction()" value="Submit">
+        </form>
     </div>
+
     <button class="collapsible">Exam #2</button>
     <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="button button1">Upload</button>
-        <button class="button button2">Submit</button>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick=" submitFunction()" value="Submit">
+        </form>
     </div>
+
     <button class="collapsible">Homework #4</button>
     <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <button class="button button1">Upload</button>
-    <button class="button button2">Submit</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick=" submitFunction()" value="Submit">
+        </form>
     </div>
+
     <button class="collapsible">Exam #3</button>
     <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <button class="button button1">Upload</button>
-    <button class="button button2">Submit</button>
-</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <form id="myForm" action="/ ">
+            <input id='fileid' type='file' value='Upload' />   
+            <input type="button" onclick=" submitFunction()" value="Submit">
+        </form>
+    </div>
+
+
+
+<!--
+    describe("firestore", () => {
+        var db;
+        before(() => {
+            var config = {
+                apiKey: "AIzaSyCM61mMr_iZnP1DzjT1PMB5vDGxfyWNM64",
+                authDomain: "firestore-snippets.firebaseapp.com",
+                projectId: "firestore-snippets"
+            };
+            var app = firebase.initializeApp(config);
+            db = firebase.firestore(app);
+            //firebase.firestore.setLogLevel("debug");
+        });
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+        apiKey: "AIzaSyCPhAYlOL60dVn5gfWYtFiczQK4tRq082o",
+        authDomain: "doodle-8e8b2.firebaseapp.com",
+        databaseURL: "https://doodle-8e8b2.firebaseio.com",
+        projectId: "doodle-8e8b2",
+        storageBucket: "doodle-8e8b2.appspot.com",
+        messagingSenderId: "523318355172",
+        appId: "1:523318355172:web:0890e08562e68235eab8f1",
+        measurementId: "G-8NWZC3YXTS"
+        };
+        // Initialize Firebase
+        const firebase = require("firebase");
+        // Required for side-effects
+        require("firebase/firestore");
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var db = firebase.firestore();
+    
+    
+    </script>
+-->
+
+
+
+
 <!--SCRIPT FOR COLLASPIBLE-START-->
     <script>
     var coll = document.getElementsByClassName("collapsible");
@@ -112,6 +183,7 @@
     </script>
     </body>
 <!--SCRIPT FOR COLLASPIBLE-END-->
+
 
 <!--SCRIPT FOR SCROLLING-START-->
 <script>
@@ -136,30 +208,49 @@
     }
     </script>
 <!--SCRIPT FOR SCROLLING-END-->
+
+<!--SCRIPT FOR UPLOAD BUTTON-START-->
+<script>
+    //document.getElementById('buttonid').addEventListener('click', openDialog);
+
+    function openDialog() {
+        document.getElementById('fileid').click();
+    }
+</script> 
+<!--SCRIPT FOR UPLOAD BUTTON-END-->
+
+<!--SUBMIT FUNCTION-START-->
+<script>
+    function submitFunction() {
+      //document.getElementById("myForm").submit();
+      if(document.getElementById("fileid").value ==""){
+        alert("Not Uploaded");
+      }else{
+        db.collection("Uploaded Files").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
+
+        alert("Uploaded File");
+      }
+
+    }
+</script>
+<!--SUBMIT FUNCTION-END-->
+
 <body>
     <div id="page-container">
       <div id="content-wrap">
         <!-- all other page content -->
       </div>
       <footer id="footer">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p style="text-align: center;"> Doodle &#169;</p>
       </div></footer>
     </div>
-   </body>
-<!--<footer>
-    <div class="w3-xlarge w3-section">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p></p>
-      </footer  id="footer"> -->
+</body>
+
+
+
+
 </html>
