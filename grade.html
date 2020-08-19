@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Grades</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/9c3fd62c76.js" crossorigin="anonymous"></script>
+        <title></title>
+        <link rel = "icon" href = "https://image.flaticon.com/icons/png/512/1985/1985640.png" type = "image/x-icon"> 
+        <body class = "container"> 
+        <link rel="stylesheet" href="Base.css">
         <link href = "grade.css" rel = "stylesheet" type ="text/css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
+    <header>
+        <div class="navigation">
+            <div class="logo">
+                <a href="/">
+                    <!--<i class="fas fa-university"></i>-->
+                    Doodle
+                </a>
+            </div>
+            <div class= "sub_title">
+                <a>
+                    Submission - CSCI 10200
+                </a>
+            </div>
+           <div class="icons">
+                <a href="/" class="home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="/" class="explore">
+                    <i class="far fa-compass"></i>
+                </a>
+                <a href="/" class="activity">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a class="profile" href="/accounts/logout">
+                    <i class="fas fa-user "></i>
+                </a>
+            </div>
+            
+        </div>
+    
+    </header>
+
     <body>
         <div>
             <h1> Grade </h1>
         </div>
 
-        <div id="class_grade"></div>
+        <div id="class_grade">
+            <button class = "collapsible">Homework #1</button>
+            <div class = "content">
+                <p>Exam 1: 90%</p>
+            </div>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+        
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+            }
+        </script>
 
     <!-- TEMPORARY STUDENT CLASS -->
         <script>
