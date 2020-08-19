@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/9c3fd62c76.js" crossorigin="anonymous"></script>
+        <title></title>
+        <link rel = "icon" href = "https://image.flaticon.com/icons/png/512/1985/1985640.png" 
+            type = "image/x-icon"> 
+    <body class = "container"> 
+    
+        <link rel="stylesheet" href="Base.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <header>
+        <div class="navigation">
+            <div class="logo">
+                <a href="/">
+                    <!--<i class="fas fa-university"></i>-->
+                    Doodle
+                </a>
+            </div>
+            <div class= "sub_title">
+                <a>
+                    Submission - CSCI 10200
+                </a>
+            </div>
+           <div class="icons">
+                <a href="/" class="home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="/" class="explore">
+                    <i class="far fa-compass"></i>
+                </a>
+                <a href="/" class="activity">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a class="profile" href="/accounts/logout">
+                    <i class="fas fa-user "></i>
+                </a>
+            </div>
+            
+        </div>
+    
+    </header>
+ 
+    <div class="space"></div>
+    
+    <button class="collapsible">Homework #1</button>
+    <div class="content" >
+        <button class="button button1">Upload</button>
+        <button class="button button2">Submit</button>
+        <p>Uploaded: Mood.jpeg</p>
+    </div>
+
+    <button class="collapsible">Homework #2</button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <button class="button button1">Upload</button>
+    <button class="button button2">Submit</button>
+    </div>
+    <button class="collapsible">Homework #3</button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible">Exam #1</button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+    }
+    </script>
+
+
+</html>

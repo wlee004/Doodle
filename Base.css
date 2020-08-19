@@ -1,0 +1,179 @@
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #f9f7d9;
+  }
+header {
+    background-color: #007187;
+    border-bottom: 1px solid #cccccc;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: left;
+    padding: 12px;
+    flex-wrap: wrap;
+    width: 155%;
+}
+
+.navigation a {
+    color: #111111;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.logo a {
+    font-size: 25px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.sub_title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+}
+.icons {
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    justify-content: flex-end;
+    width: 23%; 
+}
+
+.icons a {
+    padding-left: 30px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    color: #999999;
+    cursor: text;
+    text-align: center;
+    position: center;
+    box-sizing: border-box;
+    padding-top: 8px;
+}
+
+.content {
+    padding-top: 80px;
+    width: 80%;
+    top: 83px;
+    left: 0px;
+    margin-right: 750px;
+}
+.sign-up{
+    font-family: 'Amatic SC', cursive; 
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.login h1{
+    margin: 0;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 16px;
+    display: block;
+    text-decoration: none ;
+}
+
+.space{
+    height:5000%;
+    padding-top:70px;
+}
+.collapsible {
+    background-color: #777;
+    left: 0;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    left: 25%;
+
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+
+  /* inside of collapse*/
+  .content {    
+    padding: 0 20px;
+    max-height: 0;
+    width: 50%;
+    position: center;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 8px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #003647;
+  }
+  
+  .button1:hover {
+    background-color: #003647;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white; 
+    position: relative;
+    justify-content: left;
+    color: black; 
+    border: 2px solid #003647;
+  }
+  
+  .button2:hover {
+    background-color: #003647;
+    color: white;
+  }
