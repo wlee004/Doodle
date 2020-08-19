@@ -187,12 +187,6 @@
       if(document.getElementById("fileid").value ==""){
         alert("Not Uploaded");
       }else{
-        db.collection("Uploaded Files").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`);
-            });
-        });
-
         alert("Uploaded File");
       }
 
