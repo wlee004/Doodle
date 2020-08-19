@@ -29,7 +29,7 @@ header {
 .navigation a {
     color: #111111;
 }
-
+/* -------Title of Idea-START------- */
 .logo {
     display: flex;
     flex-direction: row;
@@ -42,6 +42,7 @@ header {
     padding-left: 10px;
     text-decoration: none;
 }
+/* -------Title of Idea-END------- */
 .sub_title {
     font-family: 'Amatic SC', cursive;
     font-size: 25px;
@@ -59,18 +60,6 @@ header {
     font-weight: lighter;
 }
 
-.searchbar {
-    display: flex;
-    justify-content: center;
-    border-radius: 3px;
-    color: #999999;
-    cursor: text;
-    text-align: center;
-    position: center;
-    box-sizing: border-box;
-    padding-top: 8px;
-}
-
 .content {
     padding-top: 80px;
     width: 80%;
@@ -78,25 +67,13 @@ header {
     left: 0px;
     margin-right: 750px;
 }
-.sign-up{
-    font-family: 'Amatic SC', cursive; 
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-.login h1{
-    margin: 0;
-    padding: 0;
-    font-family: 'Amatic SC', cursive;
-    font-size: 16px;
-    display: block;
-    text-decoration: none ;
-}
 
+/* To prevent the navigation bar from covering the first part of the page */
 .space{
     height:5000%;
     padding-top:70px;
 }
+/* -------DROPDOWN-START------- */
 .collapsible {
     background-color: #777;
     left: 0;
@@ -140,7 +117,9 @@ header {
     background-color: #f1f1f1;
     
   }
+  /* -------DROPDOWN-END------- */
 
+  /* -------BUTTON-START------- */
   .button {
     border: none;
     color: white;
@@ -177,3 +156,4 @@ header {
     background-color: #003647;
     color: white;
   }
+  /* -------BUTTON-END------- */
