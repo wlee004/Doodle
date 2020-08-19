@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grades</title>
+        <link href = "grade.css" rel = "stylesheet" type ="text/css"/>
+    </head>
+    <body>
+        <div>
+            <h1> Grade </h1>
+        </div>
+
+        <div id="class_grade"></div>
+
+    <!-- TEMPORARY STUDENT CLASS -->
+        <script>
+            class Student{
+                constructor(name, course_list){
+                    this.name = name;
+                    this.course_list = course_list;
+                }
+
+                get_name(){
+                    return this.name;
+                }
+
+                get_course_list(i){
+                    return this.course_list[i];
+                }
+
+                get_num_course_list(){
+                    return this.course_list.length;
+                }
+            }
+            // TEMP STUDENT FOR TESTING PURPOSES 
+            // LATER ADD DATA FROM QUERY 
+            s1 = new Student("Bob", ["CSC101", "CSC201"]);
+        </script>
+
+    <!-- DISPLAY ALL CLASSES FOR THE STUDENT -->
+    
+    <!-- 
+        <script>
+            var fragment = new DocumentFragment();
+            var sections = ["Exams", "Quizzes", "Projects", "Homework"];
+            for(var i = 0; i < s1.course_list.length; i++){
+                
+                node = document.createElement("h2");
+                node.innerHTML = s1.course_list[i];
+                fragment.appendChild(node);
+
+                for(var j = 0; j < 4; j++){
+                    node = document.createElement("h4");
+                    node.innerHTML = sections[j];
+                    fragment.appendChild(node);
+                }
+            }
+            document.getElementById("class_grade").appendChild(fragment);
+        </script>
+    -->
+        
+    </body>
+</html>
