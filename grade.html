@@ -25,7 +25,7 @@
             </div>
             <div class= "sub_title">
                 <a>
-                    Submission - CSCI 10200
+                    Grade
                 </a>
             </div>
            <div class="icons">
@@ -41,10 +41,8 @@
                 <a class="profile" href="/accounts/logout">
                     <i class="fas fa-user "></i>
                 </a>
-            </div>
-            
+            </div> 
         </div>
-    
     </header>
 
     <body>
@@ -52,29 +50,7 @@
             <h1> Grade </h1>
         </div>
 
-        <div id="class_grade">
-            <button class = "collapsible">Homework #1</button>
-            <div class = "content">
-                <p>Exam 1: 90%</p>
-            </div>
-        </div>
-
-        <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-        
-            for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                content.style.maxHeight = null;
-                } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                } 
-            });
-            }
-        </script>
+        <div id="space"></div>
 
     <!-- TEMPORARY STUDENT CLASS -->
         <script>
@@ -98,30 +74,49 @@
             }
             // TEMP STUDENT FOR TESTING PURPOSES 
             // LATER ADD DATA FROM QUERY 
-            s1 = new Student("Bob", ["CSC101", "CSC201"]);
+            s1 = new Student("Bob", ["CSC101", "CSC201", "CSC301", "CSC401", "CSC501", "CSC601", "CSC701"]);
         </script>
 
     <!-- DISPLAY ALL CLASSES FOR THE STUDENT -->
-    
-    <!-- 
         <script>
-            var fragment = new DocumentFragment();
             var sections = ["Exams", "Quizzes", "Projects", "Homework"];
             for(var i = 0; i < s1.course_list.length; i++){
-                
-                node = document.createElement("h2");
+                var node = document.createElement("h2");
                 node.innerHTML = s1.course_list[i];
-                fragment.appendChild(node);
+                document.getElementById("space").appendChild(node);
 
                 for(var j = 0; j < 4; j++){
-                    node = document.createElement("h4");
-                    node.innerHTML = sections[j];
-                    fragment.appendChild(node);
+                    var button = document.createElement("button");
+                    button.innerHTML = sections[j];
+                    button.setAttribute("class", "collapsible");
+                    document.getElementById("space").appendChild(button);
+
+                    var div = document.createElement("div");
+                    div.setAttribute("class","content");
+                    var p = document.createElement("p");
+                    p.innerHTML = "Grade: 90%";
+                    div.appendChild(p);
+                    document.getElementById("space").appendChild(div);
                 }
             }
-            document.getElementById("class_grade").appendChild(fragment);
         </script>
-    -->
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+        
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+            }
+        </script>
         
     </body>
 </html>
